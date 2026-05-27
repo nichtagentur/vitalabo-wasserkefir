@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wasserkefir-Kristalle 30 g · Sommer-Drop | vitalabo</title>
+<meta name="description" content="Bio Wasserkefir-Kristalle für deine eigene Sommer-Limo. Lebendige Kultur, frisch verpackt, mit Schritt-für-Schritt-Anleitung. Jetzt 20% Sommerrabatt mit Code SOMMERKEFIR25.">
+<meta property="og:title" content="Mach deine eigene Sommer-Limo. — Wasserkefir-Kristalle bei vitalabo">
+<meta property="og:description" content="30 g lebendige Kristalle. 2 Tage Geduld. Eine ganz andere Limonade. Sommer-Drop mit -20%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#009fe3;
+  --cyan-deep:#0a78b0;
+  --cyan-mist:#e6f5fc;
+  --peach:#ffc97a;
+  --peach-warm:#ff9d52;
+  --peach-deep:#c45a14;
+  --ink:#14202e;
+  --ink-soft:#4a5664;
+  --ink-faint:#8893a1;
+  --paper:#fafaf6;
+  --cream:#f3eddf;
+  --line:#e6e2d6;
+  --line-soft:#efeadd;
+  --r-sm:10px; --r-md:16px; --r-lg:24px;
+  --shadow-card:0 30px 60px -30px rgba(20,32,46,.18), 0 8px 16px -10px rgba(20,32,46,.08);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:'Geist',ui-sans-serif,system-ui,sans-serif;
+  font-size:16px; line-height:1.55; letter-spacing:-0.005em;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+.display{
+  font-family:'Fraunces',Georgia,serif;
+  font-variation-settings:"opsz" 100, "SOFT" 80, "wght" 500;
+  line-height:1.02; letter-spacing:-0.022em;
+}
+.display em{ font-style:italic; color:var(--cyan-deep);
+  font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 500; }
+
+a{ color:inherit; text-decoration:none }
+img{ display:block; max-width:100%; height:auto }
+button{ font:inherit; cursor:pointer }
+
+/* ── grain & paper texture ───────────────────────────────────────── */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:60; opacity:.045; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ── topbar ──────────────────────────────────────────────────────── */
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 32px; border-bottom:1px solid var(--line);
+  background:var(--paper); position:sticky; top:0; z-index:40;
+  backdrop-filter:saturate(140%) blur(6px);
+}
+.brand{ display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:22px; letter-spacing:-0.03em; }
+.brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--cyan); display:inline-block; box-shadow:0 0 0 4px rgba(0,159,227,.15) }
+.crumb{ font-size:13px; color:var(--ink-soft) }
+.crumb b{ color:var(--ink); font-weight:600 }
+.crumb span{ margin:0 8px; opacity:.4 }
+
+/* ── thread (the roter faden) ────────────────────────────────────── */
+.thread-host{ position:relative }
+.thread{
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  pointer-events:none; z-index:1; overflow:visible;
+}
+.thread-bg{ stroke:var(--line); stroke-width:2; fill:none; opacity:.65 }
+.thread-fg{ stroke:var(--cyan); stroke-width:2.6; fill:none; stroke-linecap:round;
+  filter:drop-shadow(0 1px 0 rgba(0,159,227,.18)); }
+.thread-bubble{ fill:var(--cyan); opacity:.55 }
+.thread-bubble.peach{ fill:var(--peach-warm); opacity:.7 }
+
+.station{
+  position:absolute; transform:translate(-50%,-50%);
+  width:46px; height:46px; border-radius:50%;
+  background:var(--paper); border:2px solid var(--cyan);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--cyan); z-index:5;
+  box-shadow: 0 0 0 6px var(--paper), 0 6px 18px -8px rgba(0,159,227,.45);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), background .35s, color .35s;
+}
+.station.lit{ background:var(--cyan); color:#fff; transform:translate(-50%,-50%) scale(1.05) }
+.station .num{ font-family:'Fraunces',serif; font-weight:600; font-size:15px; line-height:1 }
+.station svg{ width:18px; height:18px; }
+
+/* ── sections ────────────────────────────────────────────────────── */
+section{ position:relative; padding:120px 32px; max-width:1240px; margin:0 auto; z-index:2 }
+section .anchor{ position:absolute; top:50%; left:0; width:1px; height:1px; }
+@media (min-width: 880px){
+  section .anchor{ left:8% }
+  section{ padding-left:14% }
+}
+
+/* ── hero ────────────────────────────────────────────────────────── */
+.hero{ padding-top:60px; padding-bottom:140px }
+.hero-grid{ display:grid; grid-template-columns:1fr; gap:48px; align-items:center }
+@media (min-width:880px){ .hero-grid{ grid-template-columns:1.05fr 1fr; gap:80px } }
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:8px 14px; border-radius:999px;
+  background:var(--peach); color:var(--peach-deep);
+  font-size:11.5px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+}
+.eyebrow .pulse{
+  width:7px; height:7px; border-radius:50%; background:var(--peach-deep);
+  box-shadow:0 0 0 0 currentColor; animation:pulse 2.4s infinite;
+}
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(196,90,20,.5) }
+  60%{ box-shadow:0 0 0 10px rgba(196,90,20,0) }
+  100%{ box-shadow:0 0 0 0 rgba(196,90,20,0) }
+}
+
+.hero h1{ font-size:clamp(46px,7.4vw,96px); margin:22px 0 22px }
+.hero .lede{ font-size:clamp(17px,1.5vw,20px); color:var(--ink-soft); max-width:520px }
+
+.hero-meta{ display:flex; flex-wrap:wrap; gap:28px 36px; margin-top:34px; align-items:flex-end }
+.price-stack{ display:flex; flex-direction:column; gap:2px }
+.price-old{ text-decoration:line-through; color:var(--ink-faint); font-size:14px; letter-spacing:.02em }
+.price-new{ font-family:'Fraunces',serif; font-weight:600; font-size:42px; line-height:1; letter-spacing:-0.02em }
+.price-new sup{ font-size:18px; vertical-align:top; margin-left:4px; color:var(--ink-soft) }
+.price-save{ font-size:12.5px; color:var(--peach-deep); font-weight:600; margin-top:6px; letter-spacing:.04em }
+
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:18px 30px; border:0; border-radius:14px;
+  font-family:inherit; font-weight:600; font-size:16px; letter-spacing:-.005em;
+  transition:transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s, background .25s;
+  cursor:pointer;
+}
+.btn-primary{ background:var(--cyan); color:#fff; box-shadow:0 12px 28px -10px rgba(0,159,227,.55) }
+.btn-primary:hover{ background:var(--cyan-deep); transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(0,159,227,.6) }
+.btn-ghost{ background:transparent; color:var(--ink); padding:18px 8px }
+.btn-ghost:hover{ color:var(--cyan-deep) }
+.btn-arrow{ transition:transform .25s }
+.btn:hover .btn-arrow{ transform:translateX(4px) }
+
+.hero-art{
+  position:relative; aspect-ratio:4/4.5; max-width:520px; margin:0 auto;
+  display:grid; place-items:center;
+}
+.hero-art .jar{ width:100%; height:100% }
+.hero-art .seal{
+  position:absolute; top:-6%; right:-10%;
+  width:42%; aspect-ratio:1; border-radius:50%;
+  background:var(--peach-warm); color:#fff;
+  display:grid; place-content:center; text-align:center;
+  transform:rotate(-12deg);
+  box-shadow:0 24px 50px -14px rgba(255,157,82,.6);
+  font-family:'Fraunces',serif; line-height:1.05;
+}
+.seal .pct{ font-size:46px; font-weight:600 }
+.seal .label{ font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; margin-top:4px; font-family:'Geist',sans-serif; font-weight:500 }
+.hero-art .seal::before{
+  content:""; position:absolute; inset:6px; border:1px dashed rgba(255,255,255,.55); border-radius:50%;
+  animation:rotate 32s linear infinite;
+}
+@keyframes rotate{ to{ transform:rotate(360deg) } }
+
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px }
+.tag{ font-size:12px; padding:6px 11px; border-radius:999px; background:var(--cyan-mist); color:var(--cyan-deep); font-weight:500 }
+
+/* ── kicker (was ist wasserkefir) ────────────────────────────────── */
+.what{ background:var(--cream); }
+.what-wrap{ display:grid; grid-template-columns:1fr; gap:60px; align-items:start }
+@media (min-width:980px){ .what-wrap{ grid-template-columns:1fr 1.2fr; gap:100px } }
+.section-kicker{ display:inline-block; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--cyan-deep); font-weight:600 }
+h2.title{ font-size:clamp(38px,4.6vw,60px); margin:14px 0 18px }
+.what p.intro{ font-size:18px; color:var(--ink-soft); max-width:560px }
+
+.fact-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--r-md); padding:22px 24px;
+  display:flex; align-items:flex-start; gap:16px; }
+.fact-card + .fact-card{ margin-top:14px }
+.fact-card .ico{
+  width:36px; height:36px; border-radius:10px; background:var(--cyan-mist);
+  display:grid; place-content:center; color:var(--cyan-deep); flex-shrink:0;
+}
+.fact-card .ico svg{ width:18px; height:18px }
+.fact-card b{ display:block; font-weight:600; margin-bottom:2px }
+.fact-card span{ color:var(--ink-soft); font-size:14.5px }
+.disclaimer{ margin-top:20px; font-size:12.5px; color:var(--ink-faint); font-style:italic; max-width:520px }
+
+/* ── 3 schritte ──────────────────────────────────────────────────── */
+.how h2{ max-width:680px }
+.steps{ display:grid; grid-template-columns:1fr; gap:24px; margin-top:50px }
+@media (min-width:820px){ .steps{ grid-template-columns:repeat(3,1fr); gap:32px } }
+.step{ position:relative; padding:36px 28px 32px; background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+.step:hover{ transform:translateY(-4px); box-shadow:var(--shadow-card) }
+.step .n{ font-family:'Fraunces',serif; font-style:italic;
+  font-variation-settings:"opsz" 144, "SOFT" 100, "wght" 500;
+  font-size:72px; line-height:.85; color:var(--cyan); margin-bottom:18px; display:block }
+.step h3{ font-family:'Fraunces',serif; font-weight:500; font-size:24px; margin:0 0 8px; letter-spacing:-0.01em }
+.step p{ margin:0; color:var(--ink-soft); font-size:15px }
+.step .meta{ margin-top:18px; font-size:12px; color:var(--cyan-deep); font-weight:600; letter-spacing:0.05em; text-transform:uppercase }
+
+/* ── variationen ─────────────────────────────────────────────────── */
+.variations{ background:var(--cream) }
+.varia-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:50px }
+@media (min-width:820px){ .varia-grid{ grid-template-columns:repeat(4,1fr); gap:22px } }
+.varia{ background:var(--paper); border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line);
+  display:flex; flex-direction:column; transition:transform .35s, box-shadow .35s }
+.varia:hover{ transform:translateY(-3px); box-shadow:var(--shadow-card) }
+.varia .pic{ aspect-ratio:1/1; position:relative; overflow:hidden;
+  background:linear-gradient(135deg, #fff 0%, var(--cyan-mist) 100%); display:grid; place-content:center }
+.varia .pic svg{ width:60%; height:60% }
+.varia .body{ padding:18px 20px 22px }
+.varia h4{ font-family:'Fraunces',serif; font-weight:500; font-size:20px; margin:0 0 4px; letter-spacing:-0.01em }
+.varia .sub{ font-size:13px; color:var(--ink-soft) }
+.varia .note{ margin-top:14px; font-size:12px; color:var(--cyan-deep); font-weight:600; letter-spacing:0.05em; text-transform:uppercase }
+
+/* ── set / was du brauchst ───────────────────────────────────────── */
+.set-grid{ display:grid; grid-template-columns:1fr; gap:50px; align-items:center; margin-top:50px }
+@media (min-width:920px){ .set-grid{ grid-template-columns:1fr 1fr; gap:80px } }
+.set-list{ display:flex; flex-direction:column; gap:14px }
+.set-item{ display:flex; gap:18px; align-items:center; padding:18px 22px;
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--r-md) }
+.set-item .num{ width:36px; height:36px; border-radius:50%; background:var(--cyan-mist); color:var(--cyan-deep);
+  display:grid; place-content:center; flex-shrink:0; font-family:'Fraunces',serif; font-weight:600 }
+.set-item b{ display:block; font-weight:600 }
+.set-item span{ color:var(--ink-soft); font-size:14px }
+.set-item.included{ background:var(--cyan-mist); border-color:transparent }
+.set-item.included .num{ background:var(--cyan); color:#fff }
+.set-tag{ display:inline-block; margin-left:auto; font-size:11px; padding:5px 10px; border-radius:999px;
+  background:rgba(0,159,227,.2); color:var(--cyan-deep); font-weight:600; letter-spacing:.04em; text-transform:uppercase }
+
+.set-art{ aspect-ratio:1/1; max-width:480px; margin:0 auto; position:relative }
+.set-art svg{ width:100%; height:100% }
+
+/* ── offer / aktion ──────────────────────────────────────────────── */
+.offer{ background:linear-gradient(168deg, #fff7ea 0%, #fdf0d6 70%); border-radius:0; overflow:hidden }
+.offer-wrap{ max-width:1100px; margin:0 auto; padding:40px 0; position:relative }
+.offer h2{ max-width:680px }
+.offer .countdown{
+  display:flex; gap:14px; margin:34px 0 28px; flex-wrap:wrap;
+}
+.cd-box{ background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:14px 18px; min-width:88px; text-align:center }
+.cd-box .num{ font-family:'Fraunces',serif; font-weight:600; font-size:36px; line-height:1; color:var(--ink); letter-spacing:-0.02em }
+.cd-box .lab{ font-size:11px; color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; margin-top:6px; display:block }
+
+.code-box{
+  display:inline-flex; align-items:stretch; background:var(--paper); border:2px dashed var(--peach-warm);
+  border-radius:14px; overflow:hidden; max-width:100%;
+}
+.code-box .code{ padding:18px 24px; font-family:'Fraunces',serif; font-weight:600; font-size:24px; letter-spacing:0.05em; color:var(--peach-deep) }
+.code-box button{ padding:0 22px; background:var(--peach-warm); color:#fff; border:0; font-weight:600; font-size:14px; letter-spacing:0.04em }
+.code-box button:hover{ background:var(--peach-deep) }
+.code-box.copied{ border-style:solid; border-color:var(--cyan) }
+.code-box.copied button{ background:var(--cyan) }
+
+.offer-meta{ display:flex; gap:30px 36px; margin-top:28px; flex-wrap:wrap; align-items:center }
+.offer-meta .price-stack .price-new{ font-size:48px }
+.deadline{ font-size:13px; color:var(--peach-deep); font-weight:500; margin-top:8px }
+
+/* ── FAQ ─────────────────────────────────────────────────────────── */
+.faq h2{ max-width:560px }
+.faq-list{ margin-top:40px; max-width:780px }
+details{ border-top:1px solid var(--line); padding:22px 4px; cursor:pointer }
+details:last-of-type{ border-bottom:1px solid var(--line) }
+details summary{ list-style:none; font-family:'Fraunces',serif; font-weight:500; font-size:21px; letter-spacing:-0.01em;
+  display:flex; justify-content:space-between; align-items:center; gap:24px }
+details summary::-webkit-details-marker{ display:none }
+details summary::after{ content:"+"; font-family:'Fraunces',serif; font-size:30px; color:var(--cyan); line-height:1; transition:transform .25s; flex-shrink:0 }
+details[open] summary::after{ transform:rotate(45deg) }
+details p{ margin:14px 0 0; color:var(--ink-soft); max-width:680px; font-size:15px }
+
+/* ── final cta ───────────────────────────────────────────────────── */
+.final{ text-align:left; max-width:880px; padding-bottom:160px }
+.final h2{ font-size:clamp(42px,5.2vw,72px) }
+.final h2 em{ color:var(--cyan-deep) }
+.final p{ font-size:18px; color:var(--ink-soft); max-width:520px; margin:16px 0 36px }
+.final .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center }
+.final .tiny{ font-size:12px; color:var(--ink-faint); margin-top:18px; max-width:520px }
+
+/* ── footer ──────────────────────────────────────────────────────── */
+footer{ background:var(--ink); color:#cdd5de; padding:60px 32px 110px; }
+footer .inner{ max-width:1240px; margin:0 auto; display:flex; gap:30px; justify-content:space-between; flex-wrap:wrap; align-items:flex-end }
+footer .brand-w{ color:#fff; font-family:'Fraunces',serif; font-size:22px; font-weight:600 }
+footer .links{ display:flex; gap:24px; flex-wrap:wrap; font-size:13px }
+footer .links a:hover{ color:#fff }
+footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
+
+/* ── sticky buy bar ──────────────────────────────────────────────── */
+.buybar{
+  position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+  width:min(960px, calc(100% - 24px));
+  background:var(--paper); border:1px solid var(--line); border-radius:18px;
+  box-shadow:var(--shadow-card);
+  display:flex; align-items:center; gap:18px; padding:12px 14px 12px 18px;
+  z-index:30; transition:transform .35s cubic-bezier(.2,.7,.2,1), opacity .25s;
+}
+.buybar.hidden{ transform:translate(-50%, 140%); opacity:0; pointer-events:none }
+.buybar .thumb{ width:50px; height:50px; border-radius:12px; background:var(--cyan-mist); display:grid; place-content:center; flex-shrink:0 }
+.buybar .thumb svg{ width:30px; height:30px; color:var(--cyan-deep) }
+.buybar .pinfo{ display:flex; flex-direction:column; gap:1px; min-width:0 }
+.buybar .pname{ font-weight:600; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.buybar .pmeta{ font-size:12px; color:var(--ink-soft) }
+.buybar .pmeta s{ color:var(--ink-faint); margin-right:6px }
+.buybar .pmeta .now{ color:var(--peach-deep); font-weight:600 }
+.buybar .code-mini{
+  display:inline-flex; align-items:center; gap:8px; padding:8px 12px; background:var(--cream);
+  border:1px dashed var(--peach-warm); border-radius:10px; font-family:'Fraunces',serif; font-weight:600;
+  color:var(--peach-deep); font-size:13px; letter-spacing:.04em; cursor:pointer;
+}
+.buybar .code-mini:hover{ background:#fff }
+.buybar .spacer{ flex:1 }
+.buybar .btn{ padding:13px 22px; font-size:14.5px }
+@media (max-width:720px){
+  .buybar .pmeta, .buybar .code-mini{ display:none }
+  .buybar{ gap:12px; padding:10px 12px }
+}
+
+/* helper - fade-in on scroll */
+.reveal{ opacity:0; transform:translateY(20px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1) }
+.reveal.in{ opacity:1; transform:translateY(0) }
+
+/* responsive tightening */
+@media (max-width:640px){
+  section{ padding:80px 22px }
+  .topbar{ padding:14px 18px }
+  .crumb{ display:none }
+  footer{ padding:50px 22px 130px }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand"><span class="dot"></span>vitalabo</div>
+  <div class="crumb">Marken <span>·</span> Fermentation <span>·</span> <b>Wasserkefir</b></div>
+</header>
+
+<main class="thread-host" id="host">
+
+<!-- SVG THREAD (drawn by JS) -->
+<svg class="thread" id="thread" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+<!-- 1. HERO -->
+<section class="hero" id="s1">
+  <div class="anchor" data-station="1" data-icon="seed"></div>
+  <div class="hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="pulse"></span>Sommer-Drop · Charge KW 22</span>
+      <h1 class="display">Mach&nbsp;deine<br>eigene <em>Sommer-<br>Limo.</em></h1>
+      <p class="lede">30 Gramm lebendige Wasserkefir-Kristalle. Zwei Tage Geduld. Eine Limonade, die jedes Mal anders schmeckt — weil du sie selbst bestimmst.</p>
+      <div class="tag-row">
+        <span class="tag">Bio · zertifiziert</span>
+        <span class="tag">Frisch verpackt</span>
+        <span class="tag">Anleitung dabei</span>
+        <span class="tag">Versand 24 h</span>
+      </div>
+      <div class="hero-meta">
+        <div class="price-stack">
+          <span class="price-old">18,90 €</span>
+          <span class="price-new">15,12<sup>€</sup></span>
+          <span class="price-save">Du sparst 3,78 € · Code SOMMERKEFIR25</span>
+        </div>
+        <a class="btn btn-primary" href="#offer">Jetzt sichern <span class="btn-arrow">→</span></a>
+        <a class="btn btn-ghost" href="#how">So funktioniert's</a>
+      </div>
+    </div>
+
+    <div class="hero-art reveal">
+      <!-- jar illustration -->
+      <svg class="jar" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" aria-label="Glasgefäß mit Wasserkefir, Zitronenscheibe und Bläschen">
+        <defs>
+          <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#cfeaf6" stop-opacity=".95"/>
+            <stop offset="55%" stop-color="#9ed6ef" stop-opacity=".95"/>
+            <stop offset="100%" stop-color="#62b9e0" stop-opacity=".95"/>
+          </linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity=".05"/>
+          </linearGradient>
+          <radialGradient id="lemon" cx=".4" cy=".4">
+            <stop offset="0%" stop-color="#fff3a5"/>
+            <stop offset="100%" stop-color="#f4c542"/>
+          </radialGradient>
+        </defs>
+        <!-- shadow -->
+        <ellipse cx="200" cy="438" rx="135" ry="14" fill="#14202e" opacity=".09"/>
+        <!-- lid -->
+        <rect x="120" y="22" width="160" height="44" rx="6" fill="#d9d2bf"/>
+        <rect x="120" y="22" width="160" height="10" fill="#bcb39c"/>
+        <rect x="128" y="58" width="144" height="6" fill="#bcb39c" opacity=".6"/>
+        <!-- jar body -->
+        <path d="M120 70 L120 95 Q100 105 100 140 L100 380 Q100 420 140 420 L260 420 Q300 420 300 380 L300 140 Q300 105 280 95 L280 70 Z"
+              fill="#e8efe7" opacity=".35"/>
+        <path d="M120 70 L120 95 Q100 105 100 140 L100 380 Q100 420 140 420 L260 420 Q300 420 300 380 L300 140 Q300 105 280 95 L280 70 Z"
+              fill="none" stroke="#9aa6b3" stroke-width="2" opacity=".6"/>
+        <!-- liquid -->
+        <clipPath id="jarclip">
+          <path d="M120 70 L120 95 Q100 105 100 140 L100 380 Q100 420 140 420 L260 420 Q300 420 300 380 L300 140 Q300 105 280 95 L280 70 Z"/>
+        </clipPath>
+        <g clip-path="url(#jarclip)">
+          <rect x="92" y="160" width="216" height="270" fill="url(#liq)"/>
+          <!-- wavy top -->
+          <path d="M92 168 Q140 158 200 168 T308 168 L308 200 L92 200 Z" fill="url(#liq)"/>
+          <!-- lemon slice -->
+          <g transform="translate(168 240) rotate(-12)">
+            <circle r="46" fill="url(#lemon)"/>
+            <circle r="46" fill="none" stroke="#e0a91c" stroke-width="2"/>
+            <g stroke="#fff8c5" stroke-width="2.5" fill="none">
+              <line x1="0" y1="-38" x2="0" y2="38"/>
+              <line x1="-38" y1="0" x2="38" y2="0"/>
+              <line x1="-27" y1="-27" x2="27" y2="27"/>
+              <line x1="27" y1="-27" x2="-27" y2="27"/>
+            </g>
+            <circle r="34" fill="none" stroke="#fff8c5" stroke-width="1.5" opacity=".7"/>
+          </g>
+          <!-- crystals -->
+          <g fill="#fff" opacity=".92">
+            <circle cx="135" cy="370" r="5"/>
+            <circle cx="148" cy="380" r="4"/>
+            <circle cx="160" cy="372" r="6"/>
+            <circle cx="175" cy="385" r="4.5"/>
+            <circle cx="195" cy="378" r="5.5"/>
+            <circle cx="215" cy="386" r="4"/>
+            <circle cx="232" cy="376" r="6"/>
+            <circle cx="250" cy="383" r="4.5"/>
+            <circle cx="265" cy="372" r="5"/>
+            <circle cx="142" cy="396" r="3.5"/>
+            <circle cx="200" cy="402" r="5"/>
+            <circle cx="245" cy="398" r="4"/>
+          </g>
+          <!-- rising bubbles -->
+          <g fill="#fff" opacity=".7">
+            <circle class="b" cx="140" cy="340" r="3"/>
+            <circle class="b" cx="170" cy="300" r="4" style="animation-delay:-1.2s"/>
+            <circle class="b" cx="205" cy="320" r="2.5" style="animation-delay:-2s"/>
+            <circle class="b" cx="240" cy="280" r="3.5" style="animation-delay:-.5s"/>
+            <circle class="b" cx="265" cy="330" r="2" style="animation-delay:-2.8s"/>
+            <circle class="b" cx="155" cy="270" r="2.5" style="animation-delay:-3.4s"/>
+            <circle class="b" cx="220" cy="260" r="3" style="animation-delay:-4s"/>
+          </g>
+        </g>
+        <!-- glass highlight -->
+        <path d="M120 110 Q108 130 108 170 L108 360" stroke="url(#glass)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </svg>
+      <style>
+        .jar .b{ animation: rise 5s ease-in infinite }
+        @keyframes rise{
+          0%{ transform:translateY(0); opacity:0 }
+          15%{ opacity:.9 }
+          80%{ opacity:.7 }
+          100%{ transform:translateY(-140px); opacity:0 }
+        }
+      </style>
+      <div class="seal">
+        <div>
+          <div class="pct">−20%</div>
+          <div class="label">Sommer-Aktion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. WAS IST WASSERKEFIR -->
+<section class="what" id="s2">
+  <div class="anchor" data-station="2" data-icon="flask"></div>
+  <div class="what-wrap">
+    <div class="reveal">
+      <span class="section-kicker">02 — Tibicos</span>
+      <h2 class="display title">Was du da<br>eigentlich züchtest.</h2>
+      <p class="intro">Wasserkefir-Kristalle — auch <em>Tibicos</em>, <em>Japankristalle</em> oder einfach „die kleinen Glasperlen" — sind eine lebendige Symbiose aus Hefen und Milchsäurebakterien. Sie fressen Zucker und atmen Kohlensäure. Das ist alles. Den Rest machst du.</p>
+      <p class="disclaimer">Wir behaupten nichts über Heilwirkungen. Wikipedia schreibt dazu: „Heilwirkungen werden noch erforscht." Wir mögen das Getränk einfach.</p>
+    </div>
+
+    <div class="reveal" style="transition-delay:.1s">
+      <div class="fact-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v6L4 18a3 3 0 003 3h10a3 3 0 003-3l-5-9V3"/><path d="M8 3h8"/></svg></div>
+        <div><b>Die Kultur</b><span>Lactobacillus brevis, L. casei, L. nagelii · Saccharomyces cerevisiae &amp; boulardii · Acetobacter. Symbiotisch, robust, vermehrt sich von selbst.</span></div>
+      </div>
+      <div class="fact-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><b>1–2 Tage Raumtemperatur</b><span>Erste Fermentation. Ein Tag süß, zwei Tage prickelnd-säuerlich. Du entscheidest jedes Mal neu.</span></div>
+      </div>
+      <div class="fact-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M6 7v12a2 2 0 002 2h8a2 2 0 002-2V7"/><path d="M9 11v6M15 11v6"/></svg></div>
+        <div><b>0,2 – 2 % Alkohol</b><span>Je nach Dauer und Methode. Anaerob länger fermentiert = mehr. Aerob kurz fermentiert = praktisch nichts.</span></div>
+      </div>
+      <div class="fact-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 4-3 6-7 13C8 15 5 13 5 9a7 7 0 017-7z"/></svg></div>
+        <div><b>Lebt weiter</b><span>Die Kristalle wachsen mit jeder Charge. Aus 30 g werden nach Wochen 60, dann 100. Weiterverschenken empfohlen.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. IN 3 SCHRITTEN -->
+<section class="how" id="s3">
+  <div class="anchor" data-station="3" data-icon="steps"></div>
+  <div class="reveal">
+    <span class="section-kicker">03 — Anleitung</span>
+    <h2 class="display title">In drei Schritten zur<br>eigenen <em>Sommer-Limo.</em></h2>
+  </div>
+
+  <div class="steps">
+    <div class="step reveal">
+      <span class="n">1</span>
+      <h3>Ansetzen</h3>
+      <p>1 L Wasser, 60 g Zucker, deine 30 g Kristalle in ein sauberes Bügelglas geben. Optional: eine Zitronenscheibe und eine Trockenfeige.</p>
+      <div class="meta">Aufwand: 5 Minuten</div>
+    </div>
+    <div class="step reveal" style="transition-delay:.08s">
+      <span class="n">2</span>
+      <h3>Warten</h3>
+      <p>24 – 48 Stunden bei Raumtemperatur stehen lassen. Tuch drüber, kein Deckel. Du siehst Bläschen aufsteigen — das ist Leben.</p>
+      <div class="meta">Geduld: ein bis zwei Tage</div>
+    </div>
+    <div class="step reveal" style="transition-delay:.16s">
+      <span class="n">3</span>
+      <h3>Abfüllen</h3>
+      <p>Durch ein Sieb in Flaschen. Kühl stellen, nach 12 h öffnen. Es zischt. Du grinst. Die Kristalle wandern in die nächste Charge.</p>
+      <div class="meta">Belohnung: sofort</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. VARIATIONEN -->
+<section class="variations" id="s4">
+  <div class="anchor" data-station="4" data-icon="lemon"></div>
+  <div class="reveal">
+    <span class="section-kicker">04 — Variationen</span>
+    <h2 class="display title">Vier <em>Limos.</em> Eine Kultur.</h2>
+    <p style="color:var(--ink-soft); max-width:560px; margin-top:14px">Die Zweitfermentation entscheidet über den Charakter. Wenig Aufwand, große Wirkung. Probier dich durch den Sommer.</p>
+  </div>
+
+  <div class="varia-grid">
+    <div class="varia reveal">
+      <div class="pic" style="background:linear-gradient(135deg,#fff,#fff5d6)">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="38" fill="#f4c542"/>
+          <g stroke="#fff8c5" stroke-width="3" fill="none">
+            <line x1="50" y1="14" x2="50" y2="86"/>
+            <line x1="14" y1="50" x2="86" y2="50"/>
+            <line x1="22" y1="22" x2="78" y2="78"/>
+            <line x1="78" y1="22" x2="22" y2="78"/>
+          </g>
+          <circle cx="50" cy="50" r="28" fill="none" stroke="#fff8c5" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h4>Zitrone &amp; Ingwer</h4>
+        <span class="sub">Klassisch, klar, leicht scharf.</span>
+        <div class="note">Easy · Start hier</div>
+      </div>
+    </div>
+    <div class="varia reveal" style="transition-delay:.06s">
+      <div class="pic" style="background:linear-gradient(135deg,#fff,#ffd9c2)">
+        <svg viewBox="0 0 100 100">
+          <ellipse cx="50" cy="55" rx="26" ry="34" fill="#7a3520"/>
+          <ellipse cx="50" cy="50" rx="20" ry="26" fill="#a4533a"/>
+          <path d="M50 22 q3 -8 12 -10" stroke="#6e8a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <g fill="#fff7e0" opacity=".85">
+            <circle cx="44" cy="48" r="1.4"/><circle cx="54" cy="52" r="1.4"/>
+            <circle cx="48" cy="60" r="1.2"/><circle cx="58" cy="62" r="1.4"/>
+            <circle cx="46" cy="70" r="1.2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <h4>Trockenfeige</h4>
+        <span class="sub">Warm, karamellig, fast Wein.</span>
+        <div class="note">Lieblings-Rezept</div>
+      </div>
+    </div>
+    <div class="varia reveal" style="transition-delay:.12s">
+      <div class="pic" style="background:linear-gradient(135deg,#fff,#f6cfe1)">
+        <svg viewBox="0 0 100 100">
+          <g fill="#c0337b">
+            <circle cx="38" cy="44" r="9"/><circle cx="56" cy="40" r="10"/>
+            <circle cx="46" cy="58" r="11"/><circle cx="64" cy="58" r="9"/>
+            <circle cx="54" cy="72" r="8"/>
+          </g>
+          <g fill="#7a1d50" opacity=".4">
+            <circle cx="40" cy="46" r="2"/><circle cx="58" cy="42" r="2"/>
+            <circle cx="48" cy="60" r="2.4"/><circle cx="66" cy="60" r="2"/>
+          </g>
+          <path d="M50 20 q-2 10 4 16" stroke="#558040" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h4>Beeren-Mix</h4>
+        <span class="sub">Tiefrot, fruchtig, Sommerabend.</span>
+        <div class="note">Kinder-Liebling</div>
+      </div>
+    </div>
+    <div class="varia reveal" style="transition-delay:.18s">
+      <div class="pic" style="background:linear-gradient(135deg,#fff,#d4ebf6)">
+        <svg viewBox="0 0 100 100">
+          <path d="M50 18 q-14 10 -14 28 a14 14 0 0 0 28 0 q0 -18 -14 -28 z" fill="#9bcfe8"/>
+          <path d="M50 25 q-9 7 -9 20 a9 9 0 0 0 18 0 q0 -13 -9 -20 z" fill="#cfe9f4" opacity=".7"/>
+          <g fill="#0a78b0" opacity=".7">
+            <circle cx="44" cy="55" r="2"/><circle cx="56" cy="58" r="2"/>
+            <circle cx="50" cy="68" r="1.6"/>
+          </g>
+          <path d="M30 80 q20 -6 40 0" stroke="#88a18c" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h4>Pur &amp; Minze</h4>
+        <span class="sub">Klar, kühl, Glas-Wasser+.</span>
+        <div class="note">Reduktion</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WAS DU BRAUCHST -->
+<section class="set" id="s5">
+  <div class="anchor" data-station="5" data-icon="kit"></div>
+
+  <div class="reveal">
+    <span class="section-kicker">05 — Dein Set</span>
+    <h2 class="display title">Was du brauchst.<br>Das meiste hast du <em>schon.</em></h2>
+  </div>
+
+  <div class="set-grid">
+    <div class="set-list reveal">
+      <div class="set-item included">
+        <div class="num">1</div>
+        <div>
+          <b>30 g Bio-Wasserkefir-Kristalle</b>
+          <span>Lebendig, frisch verpackt, Charge KW 22 · vakuumiert mit Restflüssigkeit</span>
+        </div>
+        <span class="set-tag">Im Paket</span>
+      </div>
+      <div class="set-item included">
+        <div class="num">2</div>
+        <div>
+          <b>Bebilderte Schritt-für-Schritt-Anleitung</b>
+          <span>A5, faltbar, schmutzunempfindlich. Liegt deinem Glas direkt bei.</span>
+        </div>
+        <span class="set-tag">Im Paket</span>
+      </div>
+      <div class="set-item">
+        <div class="num">3</div>
+        <div>
+          <b>Ein 1-L-Bügelglas</b>
+          <span>Aus dem Schrank. Wenn nicht: jedes weithalsige Glas mit Tuch &amp; Gummi tut's.</span>
+        </div>
+      </div>
+      <div class="set-item">
+        <div class="num">4</div>
+        <div>
+          <b>Zucker, sauberes Wasser</b>
+          <span>Roher Rohrzucker schmeckt am besten. Leitungswasser geht — wenn chloriert: 1 h offen stehen lassen.</span>
+        </div>
+      </div>
+      <div class="set-item">
+        <div class="num">5</div>
+        <div>
+          <b>Plastiksieb, Glaskanne</b>
+          <span>Beim Abseihen kein Metall an die Kristalle. Sonst nichts Spezielles.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="set-art reveal" style="transition-delay:.1s">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Set: Glas, Zucker, Zitrone, Kristalle">
+        <defs>
+          <radialGradient id="bg2" cx=".5" cy=".5">
+            <stop offset="0%" stop-color="#e6f5fc"/>
+            <stop offset="100%" stop-color="#fafaf6"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="url(#bg2)"/>
+        <!-- back jar -->
+        <g transform="translate(60 110)">
+          <rect x="0" y="0" width="120" height="20" rx="3" fill="#d9d2bf"/>
+          <rect x="6" y="18" width="108" height="170" rx="8" fill="#e8efe7" opacity=".7" stroke="#9aa6b3"/>
+          <rect x="14" y="46" width="92" height="138" rx="4" fill="#cfeaf6"/>
+          <text x="60" y="120" text-anchor="middle" font-family="Fraunces" font-size="13" font-style="italic" fill="#0a78b0">Tag 2</text>
+        </g>
+        <!-- crystals heap -->
+        <g transform="translate(220 250)">
+          <ellipse cx="0" cy="20" rx="60" ry="10" fill="#14202e" opacity=".07"/>
+          <g fill="#fff" stroke="#c8cdb8" stroke-width="1">
+            <circle cx="-30" cy="0" r="9"/><circle cx="-18" cy="-8" r="7"/>
+            <circle cx="-8" cy="2" r="10"/><circle cx="4" cy="-6" r="8"/>
+            <circle cx="16" cy="2" r="9"/><circle cx="28" cy="-4" r="7"/>
+            <circle cx="38" cy="6" r="9"/><circle cx="-22" cy="8" r="6"/>
+            <circle cx="6" cy="10" r="7"/><circle cx="22" cy="12" r="6"/>
+          </g>
+        </g>
+        <!-- lemon -->
+        <g transform="translate(290 130) rotate(15)">
+          <ellipse rx="48" ry="32" fill="#f4c542"/>
+          <ellipse rx="48" ry="32" fill="none" stroke="#c69416" stroke-width="2"/>
+          <path d="M-45 0 L45 0" stroke="#fff8c5" stroke-width="2"/>
+        </g>
+        <!-- sugar cube -->
+        <g transform="translate(110 295)">
+          <rect width="60" height="50" rx="4" fill="#fff" stroke="#d8d3c2"/>
+          <g fill="#d8d3c2" opacity=".7">
+            <rect x="6" y="6" width="6" height="6"/><rect x="22" y="10" width="6" height="6"/>
+            <rect x="40" y="6" width="6" height="6"/><rect x="14" y="24" width="6" height="6"/>
+            <rect x="34" y="28" width="6" height="6"/><rect x="46" y="36" width="6" height="6"/>
+          </g>
+          <text x="30" y="64" text-anchor="middle" font-family="Geist" font-size="10" fill="#8893a1">Zucker</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 6. OFFER / AKTION -->
+<section class="offer" id="s6">
+  <div class="anchor" data-station="6" data-icon="tag"></div>
+  <div class="offer-wrap">
+    <div class="reveal">
+      <span class="section-kicker" style="color:var(--peach-deep)">06 — Sommer-Aktion</span>
+      <h2 class="display title">Wir machen den ersten<br>Schritt <em>günstiger.</em></h2>
+      <p style="color:var(--ink-soft); max-width:560px; margin-top:14px">
+        Bis 31. Juli bekommst du die 30-g-Charge mit 20 % Rabatt. Eingeben beim Bezahlen — fertig.
+      </p>
+    </div>
+
+    <div class="reveal" style="transition-delay:.05s">
+      <div class="countdown" id="cd" aria-label="Aktion endet 31. Juli">
+        <div class="cd-box"><span class="num" id="cd-d">--</span><span class="lab">Tage</span></div>
+        <div class="cd-box"><span class="num" id="cd-h">--</span><span class="lab">Stunden</span></div>
+        <div class="cd-box"><span class="num" id="cd-m">--</span><span class="lab">Minuten</span></div>
+        <div class="cd-box"><span class="num" id="cd-s">--</span><span class="lab">Sekunden</span></div>
+      </div>
+
+      <div class="code-box" id="codeBox" role="button" tabindex="0" aria-label="Gutscheincode kopieren">
+        <div class="code">SOMMERKEFIR25</div>
+        <button id="copyBtn">Code kopieren</button>
+      </div>
+
+      <div class="offer-meta">
+        <div class="price-stack">
+          <span class="price-old">18,90 €</span>
+          <span class="price-new">15,12<sup>€</sup></span>
+          <span class="deadline">Aktion läuft bis 31. Juli · limitierte Sommer-Charge</span>
+        </div>
+        <a class="btn btn-primary" href="#cart">In den Warenkorb <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ -->
+<section class="faq" id="s7">
+  <div class="anchor" data-station="7" data-icon="q"></div>
+  <div class="reveal">
+    <span class="section-kicker">07 — Häufige Fragen</span>
+    <h2 class="display title">Drei Dinge, die fast<br>jeder fragt.</h2>
+  </div>
+
+  <div class="faq-list reveal">
+    <details>
+      <summary>Was, wenn ich mal eine Charge vergesse?</summary>
+      <p>Die Kristalle sind robust. Im Kühlschrank in Zuckerwasser halten sie problemlos zwei bis drei Wochen. Danach einfach neu ansetzen — sie wachen wieder auf.</p>
+    </details>
+    <details>
+      <summary>Ist das was für Kinder?</summary>
+      <p>Bei aerober Fermentation (24 h, Tuch über dem Glas) liegt der Alkoholgehalt im Bereich 0,2 % — vergleichbar mit reifem Apfelsaft. Du entscheidest, was du der Familie gibst.</p>
+    </details>
+    <details>
+      <summary>Brauche ich Bio-Zucker?</summary>
+      <p>Nicht zwingend. Die Kristalle leben von Saccharose. Roher Rohrzucker liefert mehr Mineralien — schmeckt deshalb runder. Süßstoffe oder Honig: nein, die Kultur stirbt.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 8. FINAL CTA -->
+<section class="final" id="s8">
+  <div class="anchor" data-station="8" data-icon="cart"></div>
+  <div class="reveal">
+    <h2 class="display">Zwei Tage. Ein <em>Glas.</em><br>Dann ist der Sommer<br>einfach besser.</h2>
+    <p>30 g lebendige Wasserkefir-Kristalle. Anleitung dabei. Versand morgen. Bis 31. Juli mit Code <b>SOMMERKEFIR25</b> für 15,12 €.</p>
+    <div class="row">
+      <a class="btn btn-primary" href="#cart" id="finalCta">Jetzt für 15,12 € sichern <span class="btn-arrow">→</span></a>
+      <a class="btn btn-ghost" href="#s2">Erst nochmal lesen</a>
+    </div>
+    <p class="tiny">Versand 24 h · Kostenlos ab 42,90 € · 30 Tage Rückgaberecht · Bio-Zertifizierung DE-ÖKO-006</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="brand-w">vitalabo</div>
+      <p class="legal">Diese Landingpage ist ein Workshop-Konzept der niceshops AI Computer Use Schulung (Mai 2026). Wasserkefir-Fakten aus Wikipedia (de.wikipedia.org/wiki/Wasserkefir). Produktinformationen orientieren sich an realen Marktanbietern (Fairment, Helden-Pilz). Keine Heilversprechen.</p>
+    </div>
+    <div class="links">
+      <a href="#">Service</a>
+      <a href="#">Versand</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BUY BAR -->
+<div class="buybar hidden" id="buybar">
+  <div class="thumb" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2h8v3H8z"/><path d="M7 5h10l-1 16a1 1 0 01-1 1H9a1 1 0 01-1-1L7 5z"/><path d="M10 12c1 1 3 1 4 0"/></svg>
+  </div>
+  <div class="pinfo">
+    <div class="pname">Wasserkefir-Kristalle 30 g · Fairment</div>
+    <div class="pmeta"><s>18,90 €</s><span class="now">15,12 €</span> · −20 % mit Code</div>
+  </div>
+  <button class="code-mini" id="codeMini" aria-label="Code kopieren">SOMMERKEFIR25 · kopieren</button>
+  <div class="spacer"></div>
+  <a class="btn btn-primary" href="#offer">Jetzt sichern <span class="btn-arrow">→</span></a>
+</div>
+
+<script>
+(() => {
+  const STATION_ICONS = {
+    seed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V11"/><path d="M12 11c-4-1-7-4-7-9 5 0 8 4 8 9z"/><path d="M12 11c4-1 7-4 7-9-5 0-8 4-8 9z"/></svg>',
+    flask:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v6L4 18a3 3 0 003 3h10a3 3 0 003-3l-5-9V3"/><path d="M8 3h8"/></svg>',
+    steps:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4v-4"/><path d="M8 16h4v-4"/><path d="M12 12h4V8"/><path d="M16 8h4V4"/></svg>',
+    lemon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M6 6l12 12M18 6L6 18"/></svg>',
+    kit:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>',
+    tag:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h9l9 9-9 9-9-9V3z"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/></svg>',
+    q:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 9a3 3 0 116 0c0 2-3 2-3 4"/><circle cx="12" cy="17.5" r="1" fill="currentColor"/></svg>',
+    cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l3 12h11l3-9H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>'
+  };
+
+  const host = document.getElementById('host');
+  const thread = document.getElementById('thread');
+
+  function buildThread(){
+    const anchors = [...host.querySelectorAll('.anchor')];
+    const hostRect = host.getBoundingClientRect();
+    const hostTop = window.scrollY + hostRect.top;
+    const hostH = host.offsetHeight;
+    thread.setAttribute('viewBox', `0 0 1000 ${hostH}`);
+    thread.setAttribute('width', '100%');
+    thread.setAttribute('height', hostH);
+
+    const isWide = window.innerWidth >= 880;
+    const anchorX = isWide ? 80 : 38; // viewBox X (out of 1000) for the thread spine
+
+    // compute points
+    const points = anchors.map((el, i) => {
+      const r = el.getBoundingClientRect();
+      const y = window.scrollY + r.top + r.height/2 - hostTop;
+      return { x: anchorX, y, id: el.dataset.station, icon: el.dataset.icon };
+    });
+
+    // build smooth path with wave
+    let d = `M ${points[0].x} ${points[0].y - 80}`;
+    for (let i = 0; i < points.length - 1; i++){
+      const a = points[i], b = points[i+1];
+      const midY = (a.y + b.y) / 2;
+      const dir = i % 2 === 0 ? 1 : -1;
+      const wave = isWide ? 60 : 28;
+      const c1x = a.x + dir * wave, c1y = a.y + (b.y - a.y) * 0.35;
+      const c2x = a.x - dir * wave, c2y = b.y - (b.y - a.y) * 0.35;
+      d += ` C ${c1x} ${c1y} ${c2x} ${c2y} ${b.x} ${b.y}`;
+    }
+    d += ` L ${points[points.length-1].x} ${points[points.length-1].y + 200}`;
+
+    // clear and rebuild svg content
+    thread.innerHTML = '';
+    const ns = 'http://www.w3.org/2000/svg';
+    const bg = document.createElementNS(ns,'path');
+    bg.setAttribute('d', d); bg.setAttribute('class','thread-bg');
+    bg.setAttribute('vector-effect','non-scaling-stroke');
+    thread.appendChild(bg);
+
+    const fg = document.createElementNS(ns,'path');
+    fg.setAttribute('d', d); fg.setAttribute('class','thread-fg');
+    fg.setAttribute('vector-effect','non-scaling-stroke');
+    thread.appendChild(fg);
+
+    // measure path length and set dash
+    const len = fg.getTotalLength();
+    fg.style.strokeDasharray = len;
+    fg.style.strokeDashoffset = len;
+    fg.dataset.len = len;
+
+    // place stations
+    const oldStations = host.querySelectorAll('.station');
+    oldStations.forEach(s => s.remove());
+    const pageW = host.offsetWidth;
+    points.forEach((p, i) => {
+      const node = document.createElement('div');
+      node.className = 'station';
+      node.dataset.idx = i;
+      node.style.left  = (p.x / 1000 * pageW) + 'px';
+      node.style.top   = p.y + 'px';
+      node.innerHTML = STATION_ICONS[p.icon] || `<span class="num">${p.id}</span>`;
+      host.appendChild(node);
+    });
+
+    // bubbles
+    for (let i = 0; i < 14; i++){
+      const t = Math.random();
+      const pt = fg.getPointAtLength(t * len);
+      const c = document.createElementNS(ns,'circle');
+      c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y);
+      c.setAttribute('r', 1.4 + Math.random() * 2.6);
+      c.setAttribute('class','thread-bubble' + (Math.random() < 0.18 ? ' peach' : ''));
+      c.style.transformOrigin = pt.x + 'px ' + pt.y + 'px';
+      c.style.animation = `bubdrift ${6 + Math.random() * 8}s ease-in-out ${-Math.random() * 6}s infinite`;
+      thread.appendChild(c);
+    }
+
+    return { fg, len, points };
+  }
+
+  let threadState = null;
+  function rebuild(){ threadState = buildThread(); updateProgress(); }
+
+  // scroll progress fills the thread
+  function updateProgress(){
+    if (!threadState) return;
+    const { fg, len, points } = threadState;
+    const top = window.scrollY + window.innerHeight * 0.55;
+    const hostRect = host.getBoundingClientRect();
+    const hostStart = window.scrollY + hostRect.top;
+    const hostEnd = hostStart + host.offsetHeight;
+    const raw = (top - hostStart) / (hostEnd - hostStart);
+    const p = Math.max(0, Math.min(1, raw));
+    fg.style.strokeDashoffset = len * (1 - p);
+
+    // light stations as we pass them
+    const stations = host.querySelectorAll('.station');
+    stations.forEach((s, i) => {
+      const py = points[i].y;
+      const passed = (top - hostStart) > (py - 30);
+      s.classList.toggle('lit', passed);
+    });
+  }
+
+  window.addEventListener('load', () => {
+    rebuild();
+    // reveal-on-scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  });
+  window.addEventListener('resize', () => { clearTimeout(window.__r); window.__r = setTimeout(rebuild, 120); });
+  window.addEventListener('scroll', () => { window.requestAnimationFrame(updateProgress); }, { passive: true });
+
+  // bubble keyframes
+  const style = document.createElement('style');
+  style.textContent = `@keyframes bubdrift{
+    0%   { transform: translateY(0) scale(1);   opacity:.0 }
+    20%  { opacity:.55 }
+    100% { transform: translateY(-46px) scale(.7); opacity:0 }
+  }`;
+  document.head.appendChild(style);
+
+  // copy code
+  function copyCode(target){
+    navigator.clipboard.writeText('SOMMERKEFIR25').then(() => {
+      const orig = target.textContent;
+      target.textContent = 'Kopiert ✓';
+      const box = document.getElementById('codeBox');
+      if (box) box.classList.add('copied');
+      setTimeout(() => { target.textContent = orig; if (box) box.classList.remove('copied'); }, 1800);
+    }).catch(() => {});
+  }
+  const copyBtn = document.getElementById('copyBtn');
+  if (copyBtn) copyBtn.addEventListener('click', e => { e.stopPropagation(); copyCode(copyBtn); });
+  const codeBox = document.getElementById('codeBox');
+  if (codeBox) codeBox.addEventListener('click', () => copyCode(copyBtn));
+  const codeMini = document.getElementById('codeMini');
+  if (codeMini) codeMini.addEventListener('click', () => copyCode(codeMini));
+
+  // countdown to 2026-07-31 23:59:59 local
+  const target = new Date('2026-07-31T23:59:59');
+  function tick(){
+    const now = new Date();
+    let ms = target - now;
+    if (ms < 0) ms = 0;
+    const d = Math.floor(ms / 86400000);
+    const h = Math.floor(ms / 3600000) % 24;
+    const m = Math.floor(ms / 60000) % 60;
+    const s = Math.floor(ms / 1000) % 60;
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2,'0'); };
+    set('cd-d', d); set('cd-h', h); set('cd-m', m); set('cd-s', s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  // sticky buy bar visibility
+  const buybar = document.getElementById('buybar');
+  const hero = document.getElementById('s1');
+  const heroIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => buybar.classList.toggle('hidden', e.isIntersecting));
+  }, { threshold: 0.4 });
+  heroIo.observe(hero);
+})();
+</script>
+</body>
+</html>
