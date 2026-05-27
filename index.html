@@ -151,6 +151,57 @@ section .anchor{ position:absolute; top:50%; left:0; width:1px; height:1px; }
   display:grid; place-items:center;
 }
 .hero-art .jar{ width:100%; height:100% }
+.hero-photo{
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  border-radius:24px;
+  box-shadow:
+    0 50px 90px -35px rgba(20,32,46,.45),
+    0 22px 40px -18px rgba(0,159,227,.18);
+  transform: rotate(-1.4deg);
+  filter: saturate(1.04) contrast(1.02);
+  transition: transform .6s cubic-bezier(.2,.7,.2,1), box-shadow .6s;
+}
+.hero-photo:hover{ transform: rotate(0deg) scale(1.01); box-shadow:0 60px 110px -35px rgba(20,32,46,.5), 0 26px 48px -18px rgba(0,159,227,.22) }
+.hero-art::before{
+  content:""; position:absolute; z-index:-1;
+  inset:6% -4% -6% 4%; border-radius:32px;
+  background:linear-gradient(140deg, var(--cyan-mist) 0%, var(--peach) 60%, transparent 100%);
+  filter:blur(40px); opacity:.55;
+}
+/* photo banner (variations) */
+.varia-hero{
+  position:relative; margin-top:40px; border-radius:24px; overflow:hidden;
+  aspect-ratio: 16/7;
+  box-shadow:var(--shadow-card);
+}
+.varia-hero img{ width:100%; height:100%; object-fit:cover; display:block;
+  transform:scale(1.02); transition:transform 1.2s ease }
+.varia-hero:hover img{ transform:scale(1.06) }
+.varia-hero::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(170deg, transparent 40%, rgba(20,32,46,.18) 100%);
+}
+.varia-hero .caption{
+  position:absolute; left:24px; bottom:18px; color:#fff;
+  font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:18px;
+  text-shadow:0 2px 16px rgba(0,0,0,.45); letter-spacing:-0.005em;
+}
+/* kit photo */
+.set-photo{
+  width:100%; aspect-ratio:1/1; object-fit:cover;
+  border-radius:24px;
+  box-shadow:var(--shadow-card);
+  transform: rotate(1.2deg);
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.set-photo:hover{ transform: rotate(0deg) }
+.set-art{ position:relative }
+.set-art::before{
+  content:""; position:absolute; z-index:-1;
+  inset:8% -6% -8% 6%; border-radius:32px;
+  background:linear-gradient(135deg, var(--peach) 0%, var(--cyan-mist) 100%);
+  filter:blur(50px); opacity:.5;
+}
 .hero-art .seal{
   position:absolute; top:-6%; right:-10%;
   width:42%; aspect-ratio:1; border-radius:50%;
@@ -373,8 +424,8 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
     </div>
 
     <div class="hero-art reveal">
-      <!-- jar illustration -->
-      <svg class="jar" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" aria-label="Glasgefäß mit Wasserkefir, Zitronenscheibe und Bläschen">
+      <img class="hero-photo" src="img/hero.png" alt="Glasflasche mit selbstgemachtem Wasserkefir, Zitronenscheibe, Trockenfeige und Minze auf Holztisch im Sommerlicht" loading="eager" fetchpriority="high">
+      <svg class="jar" style="display:none" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" aria-label="fallback">
         <defs>
           <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#cfeaf6" stop-opacity=".95"/>
@@ -540,6 +591,11 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
     <p style="color:var(--ink-soft); max-width:560px; margin-top:14px">Die Zweitfermentation entscheidet über den Charakter. Wenig Aufwand, große Wirkung. Probier dich durch den Sommer.</p>
   </div>
 
+  <div class="varia-hero reveal">
+    <img src="img/variations.png" alt="Vier hausgemachte Wasserkefir-Limonaden in Glasflaschen: Zitrone, Feige, Beeren und Minze auf Holztisch" loading="lazy">
+    <div class="caption">Vier Flaschen. Ein Wochenende. Jede schmeckt anders.</div>
+  </div>
+
   <div class="varia-grid">
     <div class="varia reveal">
       <div class="pic" style="background:linear-gradient(135deg,#fff,#fff5d6)">
@@ -672,7 +728,8 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
     </div>
 
     <div class="set-art reveal" style="transition-delay:.1s">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Set: Glas, Zucker, Zitrone, Kristalle">
+      <img class="set-photo" src="img/kit.png" alt="Flat-lay: Bügelflasche, zwei Zitronen, Schale mit weißen Wasserkefir-Kristallen, Rohrzucker, getrocknete Feigen und Leinentuch auf Holztisch">
+      <svg style="display:none" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="fallback">
         <defs>
           <radialGradient id="bg2" cx=".5" cy=".5">
             <stop offset="0%" stop-color="#e6f5fc"/>
