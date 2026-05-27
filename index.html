@@ -224,6 +224,50 @@ section .anchor{ position:absolute; top:50%; left:0; width:1px; height:1px; }
 .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:30px }
 .tag{ font-size:12px; padding:6px 11px; border-radius:999px; background:var(--cyan-mist); color:var(--cyan-deep); font-weight:500 }
 
+/* ── reel (promo video) ──────────────────────────────────────────── */
+.reel{ padding:30px 24px 60px; max-width:1240px; margin:0 auto; position:relative; z-index:3 }
+.reel-wrap{
+  position:relative; border-radius:28px; overflow:hidden;
+  box-shadow:
+    0 60px 100px -40px rgba(20,32,46,.4),
+    0 30px 60px -28px rgba(0,159,227,.18);
+  aspect-ratio: 16/9; background:#111;
+  transform: translateY(0);
+}
+.reel video{ width:100%; height:100%; object-fit:cover; display:block }
+.reel-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(95deg, rgba(20,32,46,.55) 0%, rgba(20,32,46,.25) 50%, transparent 75%);
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: clamp(28px,4vw,56px); color:#fff;
+}
+.reel-overlay .kicker{
+  display:inline-block; width:max-content;
+  font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#fff;
+  padding:6px 12px; border:1px solid rgba(255,255,255,.45); border-radius:999px;
+  backdrop-filter: blur(6px); background:rgba(255,255,255,.08);
+  margin-bottom:14px;
+}
+.reel-overlay h3{ font-size:clamp(34px,4.6vw,60px); margin:0 0 18px; color:#fff; max-width:620px }
+.reel-overlay h3 em{ color:#ffd9a8 }
+.reel-actions{ display:flex; gap:14px; flex-wrap:wrap; align-items:center }
+.reel-mute{
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.35);
+  border-radius:999px; padding:12px 18px; backdrop-filter:blur(6px);
+  font-weight:500; font-size:14px; cursor:pointer; transition:background .25s, transform .25s;
+}
+.reel-mute:hover{ background:rgba(255,255,255,.22) }
+.reel-mute svg{ width:18px; height:18px }
+.reel-mute.on{ background:var(--peach-warm); border-color:transparent; color:#fff }
+.reel-mute.on .muted-icon{ display:none }
+.reel-mute.on .unmuted-icon{ display:block !important }
+@media (max-width:680px){
+  .reel{ padding:20px 14px 40px }
+  .reel-wrap{ border-radius:18px }
+  .reel-overlay h3{ font-size:30px }
+}
+
 /* ── kicker (was ist wasserkefir) ────────────────────────────────── */
 .what{ background:var(--cream); }
 .what-wrap{ display:grid; grid-template-columns:1fr; gap:60px; align-items:start }
@@ -520,6 +564,29 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
           <div class="pct">−20%</div>
           <div class="label">Sommer-Aktion</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO REEL — 4s Sommerspot -->
+<section class="reel" id="reel" aria-label="Sommer-Spot">
+  <div class="reel-wrap reveal">
+    <video id="promo"
+           src="img/promo.mp4"
+           poster="img/promo-poster.jpg"
+           autoplay muted loop playsinline preload="metadata"
+           aria-label="Sommer-Spot: Wasserkefir wird aus einer Bügelflasche in ein Glas gegossen"></video>
+    <div class="reel-overlay">
+      <span class="kicker">4-Sekunden-Sommer</span>
+      <h3 class="display">Dein Sommer.<br>In zwei Tagen <em>im Glas.</em></h3>
+      <div class="reel-actions">
+        <a class="btn btn-primary" href="#offer">Mit −20 % sichern <span class="btn-arrow">→</span></a>
+        <button class="reel-mute" id="muteBtn" aria-label="Ton einschalten" title="Ton einschalten">
+          <svg class="muted-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 9l4 6M20 9l-4 6"/></svg>
+          <svg class="unmuted-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14"/></svg>
+          <span class="lbl">Ton an</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1059,6 +1126,25 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
     set('cd-d', d); set('cd-h', h); set('cd-m', m); set('cd-s', s);
   }
   tick(); setInterval(tick, 1000);
+
+  // promo video sound toggle
+  const promo = document.getElementById('promo');
+  const muteBtn = document.getElementById('muteBtn');
+  if (promo && muteBtn){
+    const lbl = muteBtn.querySelector('.lbl');
+    muteBtn.addEventListener('click', () => {
+      promo.muted = !promo.muted;
+      promo.currentTime = 0;
+      promo.play().catch(()=>{});
+      muteBtn.classList.toggle('on', !promo.muted);
+      if (lbl) lbl.textContent = promo.muted ? 'Ton an' : 'Ton aus';
+    });
+    // pause when out of view to save battery
+    const reelIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) promo.play().catch(()=>{}); else promo.pause(); });
+    }, { threshold: 0.25 });
+    reelIo.observe(promo);
+  }
 
   // sticky buy bar visibility
   const buybar = document.getElementById('buybar');
