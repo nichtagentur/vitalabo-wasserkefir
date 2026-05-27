@@ -7,6 +7,7 @@
 <meta name="description" content="Bio Wasserkefir-Kristalle für deine eigene Sommer-Limo. Lebendige Kultur, frisch verpackt, mit Schritt-für-Schritt-Anleitung. Jetzt 20% Sommerrabatt mit Code SOMMERKEFIR25.">
 <meta property="og:title" content="Mach deine eigene Sommer-Limo. — Wasserkefir-Kristalle bei vitalabo">
 <meta property="og:description" content="30 g lebendige Kristalle. 2 Tage Geduld. Eine ganz andere Limonade. Sommer-Drop mit -20%.">
+<link rel="icon" type="image/svg+xml" href="img/vitalabo-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -62,8 +63,9 @@ body::before{
   background:var(--paper); position:sticky; top:0; z-index:40;
   backdrop-filter:saturate(140%) blur(6px);
 }
-.brand{ display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:22px; letter-spacing:-0.03em; }
-.brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--cyan); display:inline-block; box-shadow:0 0 0 4px rgba(0,159,227,.15) }
+.brand{ display:flex; align-items:center; gap:14px; }
+.brand img{ height:28px; width:auto; display:block }
+@media (max-width:520px){ .brand img{ height:24px } }
 .crumb{ font-size:13px; color:var(--ink-soft) }
 .crumb b{ color:var(--ink); font-weight:600 }
 .crumb span{ margin:0 8px; opacity:.4 }
@@ -337,7 +339,8 @@ details p{ margin:14px 0 0; color:var(--ink-soft); max-width:680px; font-size:15
 /* ── footer ──────────────────────────────────────────────────────── */
 footer{ background:var(--ink); color:#cdd5de; padding:60px 32px 110px; }
 footer .inner{ max-width:1240px; margin:0 auto; display:flex; gap:30px; justify-content:space-between; flex-wrap:wrap; align-items:flex-end }
-footer .brand-w{ color:#fff; font-family:'Fraunces',serif; font-size:22px; font-weight:600 }
+footer .brand-w{ display:inline-block }
+footer .brand-w img{ height:34px; width:auto; filter:brightness(0) invert(1) }
 footer .links{ display:flex; gap:24px; flex-wrap:wrap; font-size:13px }
 footer .links a:hover{ color:#fff }
 footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
@@ -389,7 +392,9 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
 
 <!-- TOPBAR -->
 <header class="topbar">
-  <div class="brand"><span class="dot"></span>vitalabo</div>
+  <a class="brand" href="https://www.vitalabo.de" aria-label="vitalabo Startseite">
+    <img src="img/vitalabo-logo.svg" alt="VitalAbo">
+  </a>
   <div class="crumb">Marken <span>·</span> Fermentation <span>·</span> <b>Wasserkefir</b></div>
 </header>
 
@@ -856,7 +861,7 @@ footer .legal{ font-size:12px; color:#7b8590; max-width:520px; margin-top:18px }
 <footer>
   <div class="inner">
     <div>
-      <div class="brand-w">vitalabo</div>
+      <div class="brand-w"><img src="img/vitalabo-logo.svg" alt="VitalAbo"></div>
       <p class="legal">Diese Landingpage ist ein Workshop-Konzept der niceshops AI Computer Use Schulung (Mai 2026). Wasserkefir-Fakten aus Wikipedia (de.wikipedia.org/wiki/Wasserkefir). Produktinformationen orientieren sich an realen Marktanbietern (Fairment, Helden-Pilz). Keine Heilversprechen.</p>
     </div>
     <div class="links">
